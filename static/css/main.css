@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.blocker {
+    display: block;
+}
+
+.img-boxing {
+    max-height : 100%;
+    max-width : 100%;
+}
+
+.box-shadow-0 {
+    box-shadow: none !important;
+}
+
+.form-control-label, .form-check-label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #272727;
+}
+
+.btn-submit {
+    background: #E30613;
+    border-color : #E30613;
+}
+
+.btn-annuler {
+    background: #B7B0B0;
+    border-color: #E30613;
+}
+
+input[type=submit], input[type=button] {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.3rem !important;
+    color: #FFFFFF !important;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding-top : 1rem;
+    padding-bottom : 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -50px;
+}
+
+.footer,
+.push {
+    height: 50px;
+}

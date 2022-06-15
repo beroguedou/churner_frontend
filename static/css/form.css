@@ -1,0 +1,64 @@
+.file-upload-wrapper {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.file-upload-wrapper:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: calc(100% - 40px);
+    pointer-events: none;
+    z-index: 20;
+    height: 100%;
+    line-height: 40px;
+    color: #999;
+    border-radius: 5px 10px 10px 5px;
+    font-weight: 300;
+}
+
+.file-upload-wrapper:before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 41 41" fill="none"><path d="M39.8253 20.0256C39.1727 20.0256 38.6507 20.5477 38.6507 21.2002V31.8853C38.6507 34.7915 36.284 37.1495 33.3865 37.1495H7.61354C4.70734 37.1495 2.34932 34.7828 2.34932 31.8853V21.0262C2.34932 20.3736 1.82725 19.8516 1.17466 19.8516C0.522071 19.8516 0 20.3736 0 21.0262V31.8853C0 36.088 3.41957 39.4988 7.61354 39.4988H33.3865C37.5891 39.4988 41 36.0793 41 31.8853V21.2002C41 20.5564 40.4779 20.0256 39.8253 20.0256Z" fill="black"/><path d="M13.8604 10.9766L19.3248 5.51222V29.3448C19.3248 29.9974 19.8468 30.5194 20.4994 30.5194C21.152 30.5194 21.6741 29.9974 21.6741 29.3448V5.51222L27.1384 10.9766C27.3647 11.2028 27.6692 11.3246 27.9651 11.3246C28.2696 11.3246 28.5654 11.2115 28.7917 10.9766C29.2528 10.5154 29.2528 9.77581 28.7917 9.31464L21.326 1.84902C21.1085 1.63149 20.804 1.50098 20.4994 1.50098C20.1862 1.50098 19.8904 1.62279 19.6728 1.84902L12.2072 9.31464C11.746 9.77581 11.746 10.5154 12.2072 10.9766C12.6597 11.429 13.408 11.429 13.8604 10.9766Z" fill="black"/></svg>');
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	z-index: 25;
+	padding: 0 15px;
+	pointer-events: none;
+	border-radius: 0 5px 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.file-upload-wrapper input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    margin: 0;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    height: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+}

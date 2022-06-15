@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block styles %}
+{{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cover.css') }}">
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+{% endblock %}
+
+{% block title %}
+Acceuil
+{% endblock %}
+
+{% block content %}
+<div class="cover-container d-flex p-3 mx-auto flex-column pt-5 mt-5">
+    <main role="main" class="inner cover">
+        <div class="navbar-brand w-100 d-flex align-items-center justify-content-center"><img src="{{ url_for('static', filename='icons/logo.jfif') }}" class="img-boxing"></div>
+        <h1 class="cover-heading text-center">Welcome on the platform churner</h1>
+
+        <hr class="mb-4">
+            <p class="lead text-center text-info">{{message}}</p>
+        <hr class="mb-4">
+
+        <form method="post" action="/">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="tenure">Tenure</label>
+                    <input type="number" step="1" class="form-control" id="tenure" placeholder="" value="" required="">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="MonthlyCharges">Monthly Charges</label>
+                    <input type="number" step="0.0000001" class="form-control" id="MonthlyCharges" placeholder="" value="" required="">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="TotalCharges">Total Charges</label>
+                    <input type="number" step="0.0000001" class="form-control" id="TotalCharges" placeholder="" value="" required="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="gender">Gender</label>
+                    <select class="custom-select d-block w-100" id="gender" required="">
+                        <option>Female</option>
+                        <option>Male</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="SeniorCitizen">Senior Citizen</label>
+                    <select class="custom-select d-block w-100" id="SeniorCitizen" required="">
+                        <option>0</option>
+                        <option>1</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Partner">Partner</label>
+                    <select class="custom-select d-block w-100" id="Partner" required="">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="Dependents">Dependents</label>
+                    <select class="custom-select d-block w-100" id="Dependents" required="">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="PhoneService">Phone Service</label>
+                    <select class="custom-select d-block w-100" id="PhoneService" required="">
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="MultipleLines">Multiple Lines</label>
+                    <select class="custom-select d-block w-100" id="MultipleLines" required="">
+                        <option>Yes</option>
+                        <option>No</option>
+                        <option>No phone service</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="InternetService">Internet Service</label>
+                    <select class="custom-select d-block w-100" id="InternetService" required="">
+                        <option>DSL</option>
+                        <option>Fiber optic</option>
+                        <option>No</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="OnlineSecurity">Online Security</label>
+                    <select class="custom-select d-block w-100" id="OnlineSecurity" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="OnlineBackup">Online Backup</label>
+                    <select class="custom-select d-block w-100" id="OnlineBackup" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="DeviceProtection">Device Protection</label>
+                    <select class="custom-select d-block w-100" id="DeviceProtection" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="TechSupport">TechSupport</label>
+                    <select class="custom-select d-block w-100" id="TechSupport" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="StreamingTV">StreamingTV</label>
+                    <select class="custom-select d-block w-100" id="StreamingTV" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="StreamingMovies">Streaming Movies</label>
+                    <select class="custom-select d-block w-100" id="StreamingMovies" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                        <option>No internet service</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="Contract">Contract</label>
+                    <select class="custom-select d-block w-100" id="Contract" required="">
+                        <option>Month-to-month</option>
+                        <option>One year</option>
+                        <option>Two year</option>
+                    </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="PaperlessBilling">Paperless Billing</label>
+                    <select class="custom-select d-block w-100" id="PaperlessBilling" required="">
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <label for="PaymentMethod">Payment Method</label>
+                    <select class="custom-select d-block w-100" id="PaymentMethod" required="">
+                        <option>Electronic check</option>
+                        <option>Mailled check</option>
+                        <option>Bank transfer (automatic)</option>
+                        <option>Credit card (automatic)</option>
+                    </select>
+                </div>
+            </div>
+
+            <hr class="mb-4">
+            <div class="w-100 d-flex align-items-center justify-content-center">
+                <button class="btn btn-primary btn-lg btn-block w-50" type="submit">Prediction</button>
+            </div>
+          </form>
+    </main>
+</div>
+{% endblock %}

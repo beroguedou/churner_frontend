@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+{% endblock %}
+
+{% macro nav_link(endpoint, name) %}
+    {% if request.endpoint.endswith(endpoint) %}
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url_for(endpoint) }}">{{name}}</a>
+        </li>
+    {% else %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for(endpoint) }}">{{name}}</a>
+        </li>
+    {% endif %}
+{% endmacro %}
+
+{% block content %}
+<nav class="navbar navbar-expand-md navbar-light pt-0 pb-0">
+    <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='icons/logo.png') }}" class="img-boxing"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            {{ nav_link('view.liste', 'Programmes') }}
+            {{ nav_link('view.create', 'Nouveau programme') }}
+        </ul>
+    </div>
+</nav>
+<main role="main" class="p-5">
+    <div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1>Bienvenue sur la page de création d'un programme</h1>
+      <p class="space-above"></p>
+    </div>
+  </div>
+</div>
+</main>
+{% endblock %}
