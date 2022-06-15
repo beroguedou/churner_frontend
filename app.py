@@ -56,7 +56,8 @@ def index():
         }
         result = inference(data)
         if result["probability"]:
-            message = "Le client a "+'{:,.2f}%'.format(result["probability"])+"% de chance de uitter notre entreprise. Vous pouvez l'appeler pour prendre des nouvelles."
+            message = result["message"]
+            # message = "Le client a "+'{:,.2f}%'.format(result["probability"])+"% de chance de uitter notre entreprise. Vous pouvez l'appeler pour prendre des nouvelles."
         else:
             message = result["message"]
 
