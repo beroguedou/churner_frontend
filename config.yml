@@ -1,1 +1,1 @@
-inference_url: http://192.167.9.108:5000
+inference_url: http://127.0.0.1:5555/serving/predict

@@ -38,7 +38,7 @@ def index():
             "MonthlyCharges": float(MonthlyCharges),
             "TotalCharges":float(TotalCharges),
             "gender":gender,
-            "SeniorCitizen":SeniorCitizen,
+            "SeniorCitizen":int(SeniorCitizen),
             "Partner":Partner,
             "Dependents":Dependents,
             "PhoneService":PhoneService,
@@ -54,11 +54,9 @@ def index():
             "PaperlessBilling":PaperlessBilling,
             "PaymentMethod":PaymentMethod
         }
+
         result = inference(data)
-        if result["probability"]:
-            message = result["message"]
-        else:
-            message = result["message"]
+        message = "{} the probability is: {}".format(result["message"], result["probability"])
 
         return render_template('index.html', message=message)
 
