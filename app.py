@@ -34,9 +34,9 @@ def index():
         PaymentMethod = request.form.get('PaymentMethod')
 
         data = {
-            "tenure":tenure,
-            "MonthlyCharges":MonthlyCharges,
-            "TotalCharges":TotalCharges,
+            "tenure":int(tenure),
+            "MonthlyCharges": float(MonthlyCharges),
+            "TotalCharges":float(TotalCharges),
             "gender":gender,
             "SeniorCitizen":SeniorCitizen,
             "Partner":Partner,
@@ -57,7 +57,6 @@ def index():
         result = inference(data)
         if result["probability"]:
             message = result["message"]
-            # message = "Le client a "+'{:,.2f}%'.format(result["probability"])+"% de chance de uitter notre entreprise. Vous pouvez l'appeler pour prendre des nouvelles."
         else:
             message = result["message"]
 

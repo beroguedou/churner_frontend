@@ -27,36 +27,36 @@ Acceuil
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="tenure">Tenure</label>
-                    <input type="number" step="1" class="form-control" id="tenure" placeholder="" value="" required="">
+                    <input type="number" step="1" class="form-control" id="tenure" name="tenure" placeholder="" value="" required="">
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="MonthlyCharges">Monthly Charges</label>
-                    <input type="number" step="0.0000001" class="form-control" id="MonthlyCharges" placeholder="" value="" required="">
+                    <input type="number" step="0.0000001" class="form-control"  name="MonthlyCharges" id="MonthlyCharges" placeholder="" value="" required="">
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="TotalCharges">Total Charges</label>
-                    <input type="number" step="0.0000001" class="form-control" id="TotalCharges" placeholder="" value="" required="">
+                    <input type="number" step="0.0000001" class="form-control" name="TotalCharges" id="TotalCharges" placeholder="" value="" required="">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="gender">Gender</label>
-                    <select class="custom-select d-block w-100" id="gender" required="">
+                    <select class="custom-select d-block w-100" name="gender" id="gender" required="">
                         <option>Female</option>
                         <option>Male</option>
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="SeniorCitizen">Senior Citizen</label>
-                    <select class="custom-select d-block w-100" id="SeniorCitizen" required="">
+                    <select class="custom-select d-block w-100" name="SeniorCitizen" id="SeniorCitizen" required="">
                         <option>0</option>
                         <option>1</option>
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="Partner">Partner</label>
-                    <select class="custom-select d-block w-100" id="Partner" required="">
+                    <select class="custom-select d-block w-100" name="Partner" id="Partner" required="">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
@@ -66,21 +66,21 @@ Acceuil
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="Dependents">Dependents</label>
-                    <select class="custom-select d-block w-100" id="Dependents" required="">
+                    <select class="custom-select d-block w-100" name="Dependents" id="Dependents" required="">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="PhoneService">Phone Service</label>
-                    <select class="custom-select d-block w-100" id="PhoneService" required="">
+                    <select class="custom-select d-block w-100" name="PhoneService" id="PhoneService" required="">
                         <option>Yes</option>
                         <option>No</option>
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="MultipleLines">Multiple Lines</label>
-                    <select class="custom-select d-block w-100" id="MultipleLines" required="">
+                    <select class="custom-select d-block w-100" name="MultipleLines" id="MultipleLines" required="">
                         <option>Yes</option>
                         <option>No</option>
                         <option>No phone service</option>
@@ -91,7 +91,7 @@ Acceuil
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="InternetService">Internet Service</label>
-                    <select class="custom-select d-block w-100" id="InternetService" required="">
+                    <select class="custom-select d-block w-100" name="InternetService" id="InternetService" required="">
                         <option>DSL</option>
                         <option>Fiber optic</option>
                         <option>No</option>
@@ -99,7 +99,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="OnlineSecurity">Online Security</label>
-                    <select class="custom-select d-block w-100" id="OnlineSecurity" required="">
+                    <select class="custom-select d-block w-100" name="OnlineSecurity" id="OnlineSecurity" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -107,7 +107,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="OnlineBackup">Online Backup</label>
-                    <select class="custom-select d-block w-100" id="OnlineBackup" required="">
+                    <select class="custom-select d-block w-100" name="OnlineBackup" id="OnlineBackup" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -118,7 +118,7 @@ Acceuil
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="DeviceProtection">Device Protection</label>
-                    <select class="custom-select d-block w-100" id="DeviceProtection" required="">
+                    <select class="custom-select d-block w-100" name="DeviceProtection" id="DeviceProtection" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -126,7 +126,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="TechSupport">TechSupport</label>
-                    <select class="custom-select d-block w-100" id="TechSupport" required="">
+                    <select class="custom-select d-block w-100" name="TechSupport" id="TechSupport" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -134,7 +134,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="StreamingTV">StreamingTV</label>
-                    <select class="custom-select d-block w-100" id="StreamingTV" required="">
+                    <select class="custom-select d-block w-100" name="StreamingTV" id="StreamingTV" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -145,7 +145,7 @@ Acceuil
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <label for="StreamingMovies">Streaming Movies</label>
-                    <select class="custom-select d-block w-100" id="StreamingMovies" required="">
+                    <select class="custom-select d-block w-100" name="StreamingMovies" id="StreamingMovies" required="">
                         <option>No</option>
                         <option>Yes</option>
                         <option>No internet service</option>
@@ -153,7 +153,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="Contract">Contract</label>
-                    <select class="custom-select d-block w-100" id="Contract" required="">
+                    <select class="custom-select d-block w-100" name="Contract" id="Contract" required="">
                         <option>Month-to-month</option>
                         <option>One year</option>
                         <option>Two year</option>
@@ -161,7 +161,7 @@ Acceuil
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="PaperlessBilling">Paperless Billing</label>
-                    <select class="custom-select d-block w-100" id="PaperlessBilling" required="">
+                    <select class="custom-select d-block w-100" name="PaperlessBilling" id="PaperlessBilling" required="">
                         <option>No</option>
                         <option>Yes</option>
                     </select>
@@ -171,7 +171,7 @@ Acceuil
             <div class="row">
                 <div class="col-md-12 mb-3">
                     <label for="PaymentMethod">Payment Method</label>
-                    <select class="custom-select d-block w-100" id="PaymentMethod" required="">
+                    <select class="custom-select d-block w-100" name="PaymentMethod" id="PaymentMethod" required="">
                         <option>Electronic check</option>
                         <option>Mailled check</option>
                         <option>Bank transfer (automatic)</option>
